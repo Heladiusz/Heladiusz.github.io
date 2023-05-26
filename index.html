@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/82f9d4c164.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div id="header">
@@ -58,10 +62,10 @@
               <p class="tab-links active-link" onclick="opentab('skills')">
                 Skills
               </p>
-              <p class="tab-links" onclick="opentab('Experience')">
+              <p class="tab-links" onclick="opentab('experience')">
                 Experience
               </p>
-              <p class="tab-links" onclick="opentab('Education')">Education</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
             </div>
             <div class="tab-contents active-tab" id="skills">
               <ul>
@@ -99,5 +103,87 @@
         </div>
       </div>
     </div>
+    <!---------services-------- -->
+    <div id="service">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="#"> Learn More</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop-simple"></i>
+            <h2>UI/UX Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="#"> Learn More</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-app-store"></i>
+            <h2>App Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="#"> Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -----------portfolio---------- -->
+    <div class="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="image/app design.png" />
+            <div class="layer">
+              <h3> Social Media App</h3>
+              <p>
+                The app connects you to the talented people around the world.
+                Download it from the play store.
+              </p>
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work"><img src="image/app design2.png" /><div class="layer">
+            <h3> Music App </h3>
+            <p>
+              The app connects you to the talented people around the world.
+              Download it from the play store.
+            </p>
+            <a href="#"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
   </body>
 </html>
